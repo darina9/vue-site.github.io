@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Jost:wght@400;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="header center">
+        <div class="header__left">
+            <img class="logo" src="./img/Logo.svg">
+        </div>
+        <h3 class="logo_brend">Interno</h3>
+
+        </div>
+        <nav class="header__right">
+            <ul class="header__right_list">
+
+
+                <li class="header__right_item">
+                    <a href="#"> Home </a>
+                </li>
+                <li class="header__right_item">
+                    <a href="#"> Project</a>
+                </li>
+                <li class="header__right_item">
+                    <a href="#"> Blog</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+    <main class="news">
+        <article class="news__banner">          
+            
+            <div class="news__banner_info">
+                <h1 class="news__banner_title big_title">
+                     Articles & News
+                </h1>
+                <p class="news__banner_text text">
+                    <a href="#" class="news__banner_link"> Home / Blog</a>
+                </p></div>
+           
+        </article>
+        <article class="news__post center">
+            <h1 class="news__post_title big_title">
+                Latest Post
+            </h1>
+            <div class="news__post_content">
+                <img class="post__content_img" src="./img/post.png">
+                <div class="post__content_info">
+                    <h2 class="post__content_title little_title">
+                        Low Cost Latest Invented Interior Designing Ideas
+                    </h2>
+                    <p class="post__content_text text">
+                        Lorem ipsum dolor sit amet, adipiscing Aliquam eu sem vitae turpis dignissim maximus.posuere in.Contrary to popular belief.</p>
+                        <p class="post__content_text text" > Lorem Ipsum is not simply random text. It has roots in a piece of classica.
+                    </p>
+                    <div class="post__content_date">
+                        <p class="date_text">26 December,2022 </p>
+                        <button class="date_btn">
+                            <img class="date_btn_img" src="./img/arrow.svg">
+                        </button> </div>
+                </div>
+                </div>
+            </div>
+        </article>
+        <article id="news" class="news__news center">
+            <div class="news__info news_title">
+                <h2 class="news__info_title big_title ">Articles & News</h2>
+            </div>
+            <div class="news__info_content" >
+                <section class="info__content_item" v-for="card in cards" :key="card.id">                   
+                    <img class="info__content_picture " :src="card.src">
+                        <button class="info_picture_btn date_text"> {{card.buttonText}} </button>    
+                    <h3 class="info__content_title little_title">{{card.title}}</h3>
+                    <div class="info__content_date">
+                        <p class="date_text">
+                            {{card.date}}
+                        </p>
+                        <button class="date_btn">
+                            <img class="date_btn_img" src="./img/arrow.svg">
+                        </button> </div>
+                </section>             
+            </div>
+            <div class="news__pagination">
+                <button class="date_btn pagination_padding">
+                    <p class="date_btn_img date_text pagination_center ">01</p>
+                </button> 
+                <button class="date_btn">
+                    <p class="date_btn_img date_text pagination_center">02</p>
+                </button> 
+                <button class="date_btn">
+                    <p class="date_btn_img date_text pagination_center">03</p>
+                </button> 
+                <button class="date_btn">
+                    <img class="date_btn_img" src="./img/arrow.svg">
+                </button> 
+            </div>
+        </article>
+    </main>
+    <footer class="footer center">
+        <section class="footer__info">
+            <div class="footer__info_logo">
+                <img class="logo" src="./img/Logo.svg">
+                <h3 class="logo_brend">Interno</h3>
+            </div>
+            <p class="footer__info_text text">
+                It is a long established fact that a reader will be distracted lookings.
+            </p>
+            <div class="footer__info_social">
+                <a href="#">
+                    <img src="./img/twitter.svg" alt="twitter"> </a>
+                    <a href="#">  
+                <img src="./img/in.svg" alt="insta"> </a>
+            </div>
+        </section>
+        <section class="footer__pages">
+            <nav class="footer__pages_title little_title">Pages
+                <ul class="footer__pages_list">
+                    <li class="footer__pages_item text">
+                        <a href="#">Home</a>
+                    </li>
+                    <li class="footer__pages_item text">
+                        <a href="#">Project</a>
+                    </li>
+                    <li class="footer__pages_item text">
+                        <a href="#">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </section>
+        <section class=" footer__contacts ">
+            <h4 class="footer__contacts_title little_title">
+                Contact
+            </h4>
+            <p class="footer__contacts_text text">
+            55 East Birchwood Ave. Brooklyn, New York 11201
+            </p>
+            <p class="footer__contacts_text text">
+            contact@interno.com
+            </p>
+            <p class="footer__contacts_text text">
+            (123) 456 - 7890
+            </p>
+        </section>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>
